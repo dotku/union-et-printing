@@ -12,7 +12,7 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const galleryImages = [
-    '/images/3025da7daaabfef104ec063a74013e83.jpg',
+    '/images/c1a420b0cdb8aefccbd76a2169e7ed39.jpg',
     '/images/3d8370e17f9e30b343c9d642f02f4ac1.jpg',
     '/images/43666db93757e349e2f75dc03f5fdaef.jpg',
     '/images/4e93921acb79f330ede701a0a429a39b.jpg',
