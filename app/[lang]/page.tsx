@@ -15,7 +15,6 @@ export default function Home() {
     '/images/3025da7daaabfef104ec063a74013e83.jpg',
     '/images/3d8370e17f9e30b343c9d642f02f4ac1.jpg',
     '/images/43666db93757e349e2f75dc03f5fdaef.jpg',
-    '/images/4c627aff42f2133bae559c1810a16192.jpg',
     '/images/4e93921acb79f330ede701a0a429a39b.jpg',
     '/images/7d46c02dcf13f808d3ea0e6369adc647.jpg',
     '/images/7d9228d7a2b7a3f797bf9d81802638c3.jpg',
