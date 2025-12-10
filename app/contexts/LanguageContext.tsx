@@ -1,6 +1,7 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 type Language = 'en' | 'zh';
 
@@ -172,7 +173,24 @@ const translations = {
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+  const router = useRouter();
+  const pathname = usePathname();
+  const [language, setLanguageState] = useState<Language>('en');
+
+  // Initialize language from URL path on mount
+  useEffect(() => {
+    const pathSegments = pathname.split('/').filter(Boolean);
+    const langFromPath = pathSegments[0];
+    if (langFromPath === 'zh' || langFromPath === 'en') {
+      setLanguageState(langFromPath);
+    }
+  }, [pathname]);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    // Navigate to the new language path
+    router.push(`/${lang}`);
+  };
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations['en']] || key;
