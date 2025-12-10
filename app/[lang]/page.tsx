@@ -19,6 +19,7 @@ export default function Home() {
     '/images/7d46c02dcf13f808d3ea0e6369adc647.jpg',
     '/images/7d9228d7a2b7a3f797bf9d81802638c3.jpg',
     '/images/a6ea4c2a47a63aad4c0bad466ef6bcb5.jpg',
+    '/images/ad801a73a3b96fa9ddde0b6d09a5f599.jpg',
   ];
 
   const openLightbox = (index: number) => {
